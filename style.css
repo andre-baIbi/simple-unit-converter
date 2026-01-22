@@ -1,0 +1,11 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form div {
+    padding: 10px;
+}
+
+div.form-input {
+    padding: 0px;
+}
