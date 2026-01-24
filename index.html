@@ -1,9 +1,8 @@
 <html>
     <head>
-        
-    </head>
-        <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
+    </head>
+        
     <body>
         <div class="core">
             <h2>Length</h2>
@@ -12,29 +11,44 @@
                 <div class="form-div">
                     <label for="length">Enter the length to convert</label>
                     <div class="form-input">
-                        <input name="length" type="text" id="length">
+                        <input name="length" type="text" id="length" pattern="^[0-9]{1,10}" required>
                     </div>
                 </div>
                 
                 <div class="form-div">
                     <label for="from">Unit to convert from</label>
                     <div class="form-input">
-                        <input name="from" type="text" id="from">
+                        <select name="from" type="text" id="from">
+                            <option value="meter">Meters (m)</option>
+                            <option value="centimeter">Centimeters (cm)</option>
+                        </select>
                     </div>
                 </div>
                 
                 <div class="form-div">
                     <label for="to">Unit to convert to</label>
                     <div class="form-input">
-                        <input name="to" type="text" id="to">
+                        <select name="to" type="text" id="to">
+                            <option value="centimeter">Centimeters (cm)</option>
+                            <option value="meter">Meters (m)</option>
+                        </select>
                     </div>
                 </div>
         
                 <div class="convert-button">
-                    <button onclick="convert(); return false">Convert</button>
+                    <button type="button" id="convert-button" onclick="convert()">Convert</button>
                 </div>
             </form>
-        </div>    
+        </div>
+        
+        <div class="answer">
+            <p class="answer-title">Answer</p>
+            <div class="answer-board">
+                <p class="answer-board" id="answer">0</p>
+                <p class="measurement">loremIpsum</p>
+            </div>
+            
+        </div>
     </body>
-
+    <script src="script.js"></script>
 </html>

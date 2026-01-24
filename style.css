@@ -9,3 +9,30 @@ form div {
 div.form-input {
     padding: 0px;
 }
+
+div.answer {
+    margin-top: 20px;
+    padding-left: 1em;
+}
+
+div.answer-board {
+    display: flex;
+    justify-content: baseline;
+    width: 25%;
+    
+}
+
+div.answer-board p {
+    padding: 5px;
+    ;
+}
+
+p.answer-board {
+    font-size: 50;
+    color: red;
+    font-weight: bold;
+}
+
+p.answer-title {
+    text-decoration: underline;
+}
