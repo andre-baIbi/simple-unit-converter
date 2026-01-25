@@ -1,54 +1,74 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <title>Unit Converter</title>
     </head>
         
     <body>
-        <div class="core">
-            <h2>Length</h2>
-
-            <form action="" class="main-form">
-                <div class="form-div">
-                    <label for="length">Enter the length to convert</label>
-                    <div class="form-input">
-                        <input name="length" type="text" id="length" pattern="^[0-9]{1,10}" required>
-                    </div>
-                </div>
+        <header>
+                <h1>Unit Converter</h1>
                 
-                <div class="form-div">
-                    <label for="from">Unit to convert from</label>
-                    <div class="form-input">
-                        <select name="from" type="text" id="from">
-                            <option value="meter">Meters (m)</option>
-                            <option value="centimeter">Centimeters (cm)</option>
-                        </select>
+        </header>
+        <hr>
+        <main>
+            <section class="core">
+                <h3>Length</h3>
+                <form action="" class="main-form">
+                    <div class="form-div">
+                        <label for="length">Enter the length to convert</label>
+                        <div class="form-input">
+                            <input name="length" type="text" id="length" pattern="^[0-9]{1,10}" required>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="form-div">
-                    <label for="to">Unit to convert to</label>
-                    <div class="form-input">
-                        <select name="to" type="text" id="to">
-                            <option value="centimeter">Centimeters (cm)</option>
-                            <option value="meter">Meters (m)</option>
-                        </select>
+                    
+                    <div class="form-div">
+                        <label for="from">Unit to convert from</label>
+                        <div class="form-input">
+                            <select name="from" type="text" id="from">
+                                <option value="meter">Meters (m)</option>
+                                <option value="centimeter">Centimeters (cm)</option>
+                                <option value="feet">Feets</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-        
-                <div class="convert-button">
-                    <button type="button" id="convert-button" onclick="convert()">Convert</button>
-                </div>
-            </form>
-        </div>
-        
-        <div class="answer">
-            <p class="answer-title">Answer</p>
-            <div class="answer-board">
-                <p class="answer-board" id="answer">0</p>
-                <p class="measurement">loremIpsum</p>
-            </div>
+                    
+                    <div class="form-div">
+                        <label for="to">Unit to convert to</label>
+                        <div class="form-input">
+                            <select name="to" type="text" id="to">
+                                <option value="centimeter">Centimeters (cm)</option>
+                                <option value="feet">Feets</option>
+                                <option value="meter">Meters (m)</option>
+                            </select>
+                        </div>
+                    </div>
             
-        </div>
+                    <div class="convert-button">
+                        <button type="button" id="convert-button" onclick="convert()">Convert</button>
+                    </div>
+                </form>
+            </section>
+        
+            <section class="answer">
+                <div class="answer">
+                    <p class="answer-title">Answer</p>
+                    <div class="answer-board">
+                        <p class="answer-board" id="answer">0</p>
+                        <p class="measurement">loremIpsum</p>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <hr>
+        <footer>
+            <h2 class="sandbox">Sandbox!</h2>
+
+
+        </footer>
+            
+
+            
     </body>
     <script src="script.js"></script>
 </html>

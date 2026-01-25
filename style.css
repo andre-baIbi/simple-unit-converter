@@ -1,5 +1,5 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
+:root {
+    font-family: cursive;
 }
 
 form div {
@@ -17,7 +17,6 @@ div.answer {
 
 div.answer-board {
     display: flex;
-    justify-content: baseline;
     width: 25%;
     
 }
@@ -35,4 +34,12 @@ p.answer-board {
 
 p.answer-title {
     text-decoration: underline;
+}
+
+.sandbox {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    background-color: black;
 }

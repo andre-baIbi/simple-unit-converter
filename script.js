@@ -1,33 +1,31 @@
 const convertElement = document.getElementById("convert-button");
 
+const meterRates = {
+    mile: 0.000621371,
+    km: 0.001,
+    feet: 3.28084,
+    centimeter: 100,
+    meter: 1
+};
+
 function fromMeters(value, toUnit) {
-    const meterRates = {
-        mile: 0.000621371,
-        km: 0.001,
-        feet: 3.28084,
-        centimeter: 100,
-        meter: 1
-    };
-
     return value * meterRates[toUnit];
-
 }
 
-function fromCentimeters(value, toUnit) {
-    const meterRates = {
-        mile: 0.00000621371,
-        km: 0.00001,
-        feet: 0.0328084,
-        meter: 0.01,
-        centimeter: 1
-    };
+function toMeters(value, toUnit) { 
+    return value / meterRates[toUnit];
+}
 
-    return value * meterRates[toUnit];
+function feetToMeter(feet){
+    return toMeters(feet, "feet")
+}
 
+function meterToFeet(meter){
+    return fromMeters(meter, "feet")
 }
 
 function centimeterToMeter(centimeter){
-    return fromCentimeters(centimeter, "meter")
+    return toMeters(centimeter, "centimeter")
 }
 function meterToCentimeter(meter){
     return fromMeters(meter, "centimeter")
@@ -35,7 +33,10 @@ function meterToCentimeter(meter){
 
 const conversionMap = {
     "meter-centimeter" : meterToCentimeter,
-    "centimeter-meter" : centimeterToMeter
+    "centimeter-meter" : centimeterToMeter,
+    "feet-meter" : feetToMeter,
+    "meter-feet" : meterToFeet
+    // todo centimeter to feet
 }
 
 function convert(){ 
