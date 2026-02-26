@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Unit Converter</title>
+    </head>
+        
+    <body>
+        <header>
+                <h1>Unit Converter - Length</h1>
+                <hr>
+        </header>
+        
+        <main>
+            <section class="core">
+                <section class="answer" id="answer-section" hidden>
+                    <div class="answer">
+                        <h3 class="answer-title">Answer</h3>
+                        <div class="answer-board">
+                            <p class="answer-result" id="answer"></p>
+                            <p class="measurement" id="measurementName"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <form action="" class="main-form">
+                    <div class="form-div">
+                        <label for="input" style="font-weight: bold;">Length to convert</label>
+                        <div class="form-input">
+                            <input name="input" type="text" id="input" pattern="^[0-9]{1,10}" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-div">
+                        <label for="from">From</label>
+                        <div class="form-input">
+                            <select name="from" type="text" id="from">
+                                <option value="meter">Meter (m)</option>
+                                <option value="centimeter">Centimeter (cm)</option>
+                                <option value="feet">Feet (ft)</option>
+                                <option value="mile">Mile (mi)</option>
+                                <option value="inch">Inch (in)</option>
+                                <option value="kilometer">Kilometer (km)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-div">
+                        <label for="to">To</label>
+                        <div class="form-input">
+                            <select name="to" type="text" id="to">
+                                <option value="centimeter">Centimeter (cm)</option>
+                                <option value="feet">Feet (ft)</option>
+                                <option value="meter">Meter (m)</option>
+                                <option value="mile">Mile (mi)</option>
+                                <option value="inch">Inch (in)</option>
+                                <option value="kilometer">Kilometer (km)</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="convert-button">
+                        <button id="convert-button" data-mode="0">Convert</button>
+                    </div>
+                </form>
+            </section>
+        
+            
+            
+
+        </main>
+        <hr> 
+        <footer>
+            <div class="link">
+                <a class="converter" href="index.html">Main Menu</a>
+                <br>
+                <a class="converter" href="weight_converter.html">Weight Converter</a>
+            </div>
+        </footer>   
+    </body>
+    <script src="script.js"></script>
+</html>
