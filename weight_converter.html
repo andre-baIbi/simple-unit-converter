@@ -6,7 +6,7 @@
         
     <body>
         <header>
-                <h1>Unit Converter - Length</h1>
+                <h1>Unit Converter - Weight</h1>
                 <hr>
         </header>
         
@@ -24,7 +24,7 @@
 
                 <form action="" class="main-form">
                     <div class="form-div">
-                        <label for="input" style="font-weight: bold;">Length to convert</label>
+                        <label for="input" style="font-weight: bold;">Weight to convert</label>
                         <div class="form-input">
                             <input name="input" type="text" id="input" pattern="^[0-9]{1,10}" required>
                         </div>
@@ -34,12 +34,13 @@
                         <label for="from">From</label>
                         <div class="form-input">
                             <select name="from" type="text" id="from">
-                                <option value="meter">Meter (m)</option>
-                                <option value="centimeter">Centimeter (cm)</option>
-                                <option value="feet">Feet (ft)</option>
-                                <option value="mile">Mile (mi)</option>
-                                <option value="inch">Inch (in)</option>
-                                <option value="kilometer">Kilometer (km)</option>
+                                <option value="kilogram">Kilogram (kg)</option>
+                                <option value="gram">Gram (g)</option>
+                                <option value="milligram">Milligram (mg)</option>
+                                <option value="metric_ton">Metric Ton (t)</option>
+                                <option value="pound">Pound (lb)</option>
+                                <option value="ounce">Ounce (oz)</option>
+                                <option value="stone">Stone (st)</option>
                             </select>
                         </div>
                     </div>
@@ -48,18 +49,19 @@
                         <label for="to">To</label>
                         <div class="form-input">
                             <select name="to" type="text" id="to">
-                                <option value="centimeter">Centimeter (cm)</option>
-                                <option value="feet">Feet (ft)</option>
-                                <option value="meter">Meter (m)</option>
-                                <option value="mile">Mile (mi)</option>
-                                <option value="inch">Inch (in)</option>
-                                <option value="kilometer">Kilometer (km)</option>
+                                <option value="gram">Gram (g)</option>
+                                <option value="kilogram">Kilogram (kg)</option>
+                                <option value="milligram">Milligram (mg)</option>
+                                <option value="metric_ton">Metric Ton (t)</option>
+                                <option value="pound">Pound (lb)</option>
+                                <option value="ounce">Ounce (oz)</option>
+                                <option value="stone">Stone (st)</option>
                             </select>
                         </div>
                     </div>
             
                     <div class="convert-button">
-                        <button id="convert-button" data-mode="0">Convert</button>
+                        <button id="convert-button" data-mode="1">Convert</button>
                     </div>
                 </form>
             </section>
@@ -73,7 +75,7 @@
             <div class="link">
                 <a class="converter" href="index.html">Main Menu</a>
                 <br>
-                <a class="converter" href="weight_converter.html">Weight Converter</a>
+                <a class="converter" href="length_converter.html">Length Converter</a>
             </div>
         </footer>   
     </body>
