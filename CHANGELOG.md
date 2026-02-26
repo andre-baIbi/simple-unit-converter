@@ -1,3 +1,10 @@
+## 0.1.0 (2026-02-26)
+
+### Feat
+
+- **weight**: Adds weight conversion feature. Logic rewritten (less hardcoding). Adds basic integration between pages
+- **alpha**: Adds main menu. Optimizes the logic from unit conversion. Changes the layout a little bit. + minor fixes
+
 ## 0.0.3 (2026-01-25)
 
 ### Fix
