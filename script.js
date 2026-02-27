@@ -37,6 +37,8 @@ function toUnitUsingRate(value, toUnit, unit){
     }
 }
 
+// Lenght methods
+
 function fromMeters(value, toUnit) {
     return fromUnitUsingRate(value, toUnit, "length")
 }
@@ -44,6 +46,12 @@ function fromMeters(value, toUnit) {
 function toMeters(value, toUnit) { 
     return toUnitUsingRate(value, toUnit, "length")
 }
+
+function length_converter(value, fromUnit, toUnit){
+    return(fromMeters(toMeters(value, fromUnit), toUnit))
+}
+
+// Weight methods
 
 function fromKilograms(value, toUnit) {
     return fromUnitUsingRate(value, toUnit, "weight")
@@ -53,17 +61,41 @@ function toKilograms(value, toUnit) {
     return toUnitUsingRate(value, toUnit, "weight")
 }
 
-function length_converter(value, fromUnit, toUnit){
-    return(fromMeters(toMeters(value, fromUnit), toUnit))
-}
-
 function weight_converter(value, fromUnit, toUnit){
     return(fromKilograms(toKilograms(value, fromUnit), toUnit))
 }
 
+// Temperature
 
-function convert(logic){
-    // 0 -> Length / 1 -> Weight
+const toKelvin = {
+    celsius: (c) => c + 273.15,
+    kelvin: (v) => v,
+    fahrenheit: (f) => (f-32) * (5/9) + 273.15,
+    rankine: (r) => r * 5/9,
+}
+
+const fromKelvin = {
+    celsius: (kel) => kel - 273.15,
+    fahrenheit: (kel) => (kel - 273.15) * 9/5 + 32,
+    kelvin: (kel) => kel,
+    rankine: (kel) => kel * 1.8
+}
+
+function convertToKelvin(value, fromUnit){
+    return toKelvin[fromUnit](value)
+}
+
+function convertFromKelvin(value, toUnit){
+    return fromKelvin[toUnit](value)
+}
+
+function temperature_converter(value, fromUnit, toUnit){
+    return convertFromKelvin(convertToKelvin(value, fromUnit), toUnit).toFixed(2)
+}
+
+
+function convert(mode){
+    // 0 -> Length / 1 -> Weight / 2 -> Temperature
 
     const inputElement = document.getElementById("input");     
     const toElement = document.getElementById("to"); 
@@ -77,9 +109,9 @@ function convert(logic){
     toValue = toElement.value;
     answerSection.removeAttribute("hidden")
     
-    console.log(logic)
+    console.log(mode)
 
-    switch (parseInt(logic)){
+    switch (parseInt(mode)){
         case 0:
             answerElement.innerHTML = length_converter(inputElement.value, fromValue, toValue);
             break;
@@ -88,6 +120,10 @@ function convert(logic){
             answerElement.innerHTML = weight_converter(inputElement.value, fromValue, toValue);
             break;
         
+        case 2:
+            answerElement.innerHTML = temperature_converter(parseFloat(inputElement.value), fromValue, toValue);
+            break;
+
         default:
             answerElement.innerHTML = "Error : Check JS";
             break;
