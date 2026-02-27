@@ -1,3 +1,9 @@
+## 0.2.0 (2026-02-27)
+
+### Feat
+
+- **temperature**: Adds temperature implementation. Minor fixes
+
 ## 0.1.0 (2026-02-26)
 
 ### Feat
