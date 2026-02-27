@@ -6,25 +6,36 @@
         
     <body>
         <header>
-                <h1>Unit Converter - Temperature</h1>
-                <hr>
+            <h1>Unit Converter - Temperature</h1>
+            <div class="links">
+                <a class="converter" id="leftmost" href="index.html">Main Menu</a>
+                <a class="converter" href="length_converter.html">Length Converter</a>
+                <a class="converter" href="weight_converter.html">Weight Converter</a>
+            </div>
         </header>
         
         <main>
             <section class="core">
                 <section class="answer" id="answer-section" hidden>
                     <div class="answer">
-                        <h3 class="answer-title">Answer</h3>
+                        <h3 class="answer-title">Result of your calculation</h3>
                         <div class="answer-board">
-                            <p class="answer-result" id="answer"></p>
-                            <p class="measurement" id="measurementName"></p>
+                            <p class="fromValue value" id="convertValue"></p>
+                            <p class="unit" id="convertUnit"></p>
+                            <p class="equal-sign">=</p>
+                            <p class="answerResult value" id="answer"></p>
+                            <p class="unit" id="answerUnit"></p>
                         </div>
+                    </div>
+                    <div class="reset-button">
+                        <button id="reset-button" onclick="window.location.reload();">Reset</button>
                     </div>
                 </section>
 
-                <form action="" class="main-form">
+                <section class="main-form" id="main-form">
+                    <form action="" class="main-form">
                     <div class="form-div">
-                        <label for="input" style="font-weight: bold;">Weight to convert</label>
+                        <label for="input" style="font-weight: bold;">Temperature to convert</label>
                         <div class="form-input">
                             <input name="input" type="text" id="input" pattern="^[0-9]{1,10}" required>
                         </div>
@@ -58,22 +69,10 @@
                         <button id="convert-button" data-mode="2">Convert</button>
                     </div>
                 </form>
+                </section>
+                
             </section>
-        
-            
-            
-
-        </main>
-        <hr> 
-        <footer>
-            <div class="link">
-                <a class="converter" href="index.html">Main Menu</a>
-                <br>
-                <a class="converter" href="length_converter.html">Length Converter</a>
-                <br>
-                <a class="converter" href="weight_converter.html">Weight Converter</a>
-            </div>
-        </footer>   
+        </main>  
     </body>
     <script src="script.js"></script>
 </html>
