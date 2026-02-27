@@ -101,14 +101,20 @@ function convert(mode){
     const toElement = document.getElementById("to"); 
     const fromElement = document.getElementById("from"); 
     const answerElement = document.getElementById("answer");
-    const measurementPElement = document.getElementById("measurementName")
+    const measurementPElement = document.getElementById("answerUnit")
     const answerSection = document.getElementById("answer-section")
+    const convertValueElement = document.getElementById("convertValue")
+    const convertValueUnitElement = document.getElementById("convertUnit")
+    const mainForm = document.getElementById("main-form");
 
-    
     fromValue = fromElement.value;
     toValue = toElement.value;
-    answerSection.removeAttribute("hidden")
-    
+    answerSection.removeAttribute("hidden");
+       
+
+    convertValueElement.innerHTML = inputElement.value
+    convertValueUnitElement.innerHTML = fromValue
+
     console.log(mode)
 
     switch (parseInt(mode)){
@@ -132,6 +138,8 @@ function convert(mode){
 
     // set measurement name as in options
     measurementPElement.innerHTML = toElement.options[toElement.selectedIndex].text;
+
+    mainForm.hidden = true;
 }
 
 convertElement.addEventListener("click", (e) => {
