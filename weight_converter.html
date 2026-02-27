@@ -6,78 +6,78 @@
         
     <body>
         <header>
-                <h1>Unit Converter - Weight</h1>
-                <hr>
+            <h1>Unit Converter - Weight</h1>
+            <div class="links">
+                    <a class="converter" id="leftmost" href="index.html">Main Menu</a>
+                    <a class="converter" href="length_converter.html">Length Converter</a>
+                    <a class="converter" href="temperature_converter.html">Temperature Converter</a>
+            </div>
         </header>
         
         <main>
             <section class="core">
                 <section class="answer" id="answer-section" hidden>
                     <div class="answer">
-                        <h3 class="answer-title">Answer</h3>
+                        <h3 class="answer-title">Result of your calculation</h3>
                         <div class="answer-board">
-                            <p class="answer-result" id="answer"></p>
-                            <p class="measurement" id="measurementName"></p>
+                            <p class="fromValue value" id="convertValue"></p>
+                            <p class="unit" id="convertUnit"></p>
+                            <p class="equal-sign">=</p>
+                            <p class="answerResult value" id="answer"></p>
+                            <p class="unit" id="answerUnit"></p>
                         </div>
+                    </div>
+                    <div class="reset-button">
+                        <button id="reset-button" onclick="window.location.reload();">Reset</button>
                     </div>
                 </section>
 
-                <form action="" class="main-form">
-                    <div class="form-div">
-                        <label for="input" style="font-weight: bold;">Weight to convert</label>
-                        <div class="form-input">
-                            <input name="input" type="text" id="input" pattern="^[0-9]{1,10}" required>
+                <section class="main-form" id="main-form"> 
+                    <form action="" class="main-form">
+                        <div class="form-div">
+                            <label for="input" style="font-weight: bold;">Weight to convert</label>
+                            <div class="form-input">
+                                <input name="input" type="text" id="input" pattern="^[0-9]{1,10}" required>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="form-div">
-                        <label for="from">From</label>
-                        <div class="form-input">
-                            <select name="from" type="text" id="from">
-                                <option value="kilogram">Kilogram (kg)</option>
-                                <option value="gram">Gram (g)</option>
-                                <option value="milligram">Milligram (mg)</option>
-                                <option value="metric_ton">Metric Ton (t)</option>
-                                <option value="pound">Pound (lb)</option>
-                                <option value="ounce">Ounce (oz)</option>
-                                <option value="stone">Stone (st)</option>
-                            </select>
+                        
+                        <div class="form-div">
+                            <label for="from">From</label>
+                            <div class="form-input">
+                                <select name="from" type="text" id="from">
+                                    <option value="kilogram">Kilogram (kg)</option>
+                                    <option value="gram">Gram (g)</option>
+                                    <option value="milligram">Milligram (mg)</option>
+                                    <option value="metric_ton">Metric Ton (t)</option>
+                                    <option value="pound">Pound (lb)</option>
+                                    <option value="ounce">Ounce (oz)</option>
+                                    <option value="stone">Stone (st)</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="form-div">
-                        <label for="to">To</label>
-                        <div class="form-input">
-                            <select name="to" type="text" id="to">
-                                <option value="gram">Gram (g)</option>
-                                <option value="kilogram">Kilogram (kg)</option>
-                                <option value="milligram">Milligram (mg)</option>
-                                <option value="metric_ton">Metric Ton (t)</option>
-                                <option value="pound">Pound (lb)</option>
-                                <option value="ounce">Ounce (oz)</option>
-                                <option value="stone">Stone (st)</option>
-                            </select>
+                        
+                        <div class="form-div">
+                            <label for="to">To</label>
+                            <div class="form-input">
+                                <select name="to" type="text" id="to">
+                                    <option value="gram">Gram (g)</option>
+                                    <option value="kilogram">Kilogram (kg)</option>
+                                    <option value="milligram">Milligram (mg)</option>
+                                    <option value="metric_ton">Metric Ton (t)</option>
+                                    <option value="pound">Pound (lb)</option>
+                                    <option value="ounce">Ounce (oz)</option>
+                                    <option value="stone">Stone (st)</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-            
-                    <div class="convert-button">
-                        <button id="convert-button" data-mode="1">Convert</button>
-                    </div>
-                </form>
+                
+                        <div class="convert-button">
+                            <button id="convert-button" data-mode="1">Convert</button>
+                        </div>
+                    </form>
+                </section>
             </section>
-        
-            
-            
-
-        </main>
-        <hr> 
-        <footer>
-            <div class="link">
-                <a class="converter" href="index.html">Main Menu</a>
-                <br>
-                <a class="converter" href="length_converter.html">Length Converter</a>
-            </div>
-        </footer>   
+        </main> 
     </body>
     <script src="script.js"></script>
 </html>

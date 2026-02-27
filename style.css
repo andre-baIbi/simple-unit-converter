@@ -6,6 +6,21 @@ form div {
     padding: 10px;
 }
 
+header {
+    padding-bottom: 6%;
+}
+
+a.converter {
+    text-decoration: blue wavy underline;
+    font-size: larger;
+    padding-left: 5%;
+    padding-bottom: 4%;
+}
+
+#leftmost {
+    padding-left: 0;
+}
+
 div.test-1 {
     display: block;
     width: 200px;
@@ -32,24 +47,32 @@ div.answer {
 div.answer-board {
     width: 75vw;
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
     gap: 10px;
+    
 
 }
 
 div.answer-board p {
-    flex: 1;
-    display: block;
-    
+    justify-content: flex-start;
+    font-size: 40px;
     margin: 0;
 }
 
-div.answer-board p.answer-result {
-    font-size: 40px;
-    color: red;
+div.answer-board p.value{
     font-weight: bold;
-    width: auto;
 }
+
+div.answer-board p.answerResult {
+    color: red;
+}
+
+div.answer-board p.unit {
+    font-size: 15px;
+    
+}
+
+
 
 p.answer-title {
     text-decoration: underline;
@@ -59,11 +82,17 @@ p.answer-title {
     padding-top: 30px;
 }
 
-.convert-button > * {
+button {
     font-size: 20;
     width: 7.5em;
     font-family: cursive;
 
+}
+
+#reset-button {
+    margin-top: 10px;
+    margin-left: 3em;
+    margin-bottom: 5em;
 }
 
 .converter {

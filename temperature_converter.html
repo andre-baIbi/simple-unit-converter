@@ -6,12 +6,11 @@
         
     <body>
         <header>
-            <h1>Unit Converter - Length</h1>
-            
+            <h1>Unit Converter - Temperature</h1>
             <div class="links">
                 <a class="converter" id="leftmost" href="index.html">Main Menu</a>
+                <a class="converter" href="length_converter.html">Length Converter</a>
                 <a class="converter" href="weight_converter.html">Weight Converter</a>
-                <a class="converter" href="temperature_converter.html">Temperature Converter</a>
             </div>
         </header>
         
@@ -33,10 +32,10 @@
                     </div>
                 </section>
 
-            <section class="main-form" id="main-form"> 
-                <form action="" class="main-form">
+                <section class="main-form" id="main-form">
+                    <form action="" class="main-form">
                     <div class="form-div">
-                        <label for="input" style="font-weight: bold;">Length to convert</label>
+                        <label for="input" style="font-weight: bold;">Temperature to convert</label>
                         <div class="form-input">
                             <input name="input" type="text" id="input" pattern="^[0-9]{1,10}" required>
                         </div>
@@ -46,12 +45,10 @@
                         <label for="from">From</label>
                         <div class="form-input">
                             <select name="from" type="text" id="from">
-                                <option value="meter">Meter (m)</option>
-                                <option value="centimeter">Centimeter (cm)</option>
-                                <option value="feet">Feet (ft)</option>
-                                <option value="mile">Mile (mi)</option>
-                                <option value="inch">Inch (in)</option>
-                                <option value="kilometer">Kilometer (km)</option>
+                                <option value="celsius">Celsius (°C)</option>
+                                <option value="fahrenheit">Fahrenheit (°F)</option>
+                                <option value="kelvin">Kelvin (K)</option>
+                                <option value="rankine">Rankine (°R)</option>
                             </select>
                         </div>
                     </div>
@@ -60,24 +57,22 @@
                         <label for="to">To</label>
                         <div class="form-input">
                             <select name="to" type="text" id="to">
-                                <option value="centimeter">Centimeter (cm)</option>
-                                <option value="feet">Feet (ft)</option>
-                                <option value="meter">Meter (m)</option>
-                                <option value="mile">Mile (mi)</option>
-                                <option value="inch">Inch (in)</option>
-                                <option value="kilometer">Kilometer (km)</option>
+                                <option value="celsius">Celsius (°C)</option>
+                                <option value="fahrenheit">Fahrenheit (°F)</option>
+                                <option value="kelvin">Kelvin (K)</option>
+                                <option value="rankine">Rankine (°R)</option>
                             </select>
                         </div>
                     </div>
             
                     <div class="convert-button">
-                        <button id="convert-button" data-mode="0">Convert</button>
+                        <button id="convert-button" data-mode="2">Convert</button>
                     </div>
                 </form>
-            </section>
+                </section>
                 
             </section>
-        </main>
+        </main>  
     </body>
     <script src="script.js"></script>
 </html>
